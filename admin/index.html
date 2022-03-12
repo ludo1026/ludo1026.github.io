@@ -3,12 +3,12 @@
     <h1>Admin</h1>
     <div id="main"></div>
 <script>
-init();
-function init() {
+await init();
+async function init() {
   var main = document.getElementById('main');
-  main.innerHTML = fetchApi();
+  main.innerHTML = await fetchApi();
 }
-function fetchApi() { 
+async function fetchApi() { 
   var myHeaders = new Headers();
 
   var myInit = { method: 'GET',
